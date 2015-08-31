@@ -100,19 +100,19 @@ class TestRPNCalculator < MiniTest::Test
   end
 
   def test_errors_with_insufficient_numbers
-    assert_raises "calculator is empty" do
+    assert_raises RuntimeError, "calculator is empty" do
       @calculator.plus
     end
 
-    assert_raises "calculator is empty" do
+    assert_raises RuntimeError, "calculator is empty" do
       @calculator.minus
     end
 
-    assert_raises "calculator is empty" do
+    assert_raises RuntimeError, "calculator is empty" do
       @calculator.times
     end
 
-    assert_raises "calculator is empty" do
+    assert_raises RuntimeError, "calculator is empty" do
       @calculator.divide
     end
   end
